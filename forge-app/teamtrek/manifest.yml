@@ -1,0 +1,18 @@
+modules:
+  jira:issueAction:
+    - key: teamtrek-hello-world-issue-action
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: teamtrek
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/752e9624-7483-4ee8-a831-381fef4488bd
