@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    background-color: #f8fff2;
+    gap: 2rem;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.headerTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #202124;
+}
+
+.fadeIn {
+    display: inline-block;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #5f6368;
+    margin: 1rem 0 2rem;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.primary {
+    background-color: #34a853;
+    color: white;
+}
+
+.secondary {
+    background-color: transparent;
+    color: #34a853;
+    border: 1px solid #34a853;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.statisticsContainer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.statNumber {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #202124;
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: #5f6368;
+}
+
+.imageContainer {
+    flex: 1;
+}
+
+.image {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

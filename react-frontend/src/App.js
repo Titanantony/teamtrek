@@ -5,17 +5,19 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import RootLayout from './Layout/RootLayout';
-import Sidebar from './Layout/Sidebar';
+import Frontpage from './Pages/Frontpage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<RootLayout />}>
-        <Route index element={<Sidebar />}/>
+        <Route index element={<Frontpage />} />
+        
       </Route>
     </>
   )
-)
+);
+
 function App() {
   return <RouterProvider router={router} />;
 }
