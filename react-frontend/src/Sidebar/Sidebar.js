@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const SidebarWrapper = styled.div`
@@ -51,6 +51,10 @@ const AddButton = styled.button`
   &:hover {
     background-color: #2980b9;
   }
+    @media (max-width: 768px) {
+    right: 20px;
+    left: auto; 
+  }
 `;
 
 const Nav = styled.nav`
@@ -77,6 +81,24 @@ const NavLink = styled.a`
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
+
+  // Adjust sidebar default state based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsOpen(false); // Set sidebar closed by default on small screens
+      } else {
+        setIsOpen(true); // Set sidebar open by default on larger screens
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
