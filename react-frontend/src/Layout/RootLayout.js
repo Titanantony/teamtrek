@@ -16,8 +16,8 @@ const Appcontent = styled.div`
   left: 0;
   height: 100%;
   width: ${(props) => (props.isOpen ? "250px" : "0px")};
-  background-color: #2c3e50;
-  color: white;
+  background-color: #F5F5F5;
+  color: black;
   transition: width 0.3s ease-in-out;
 `;
 
@@ -46,7 +46,7 @@ position: absolute;
   cursor: pointer;
 
   &:hover {
-    color: red;
+    color: #5771ff;
   }
 `;
 
@@ -61,7 +61,7 @@ const AddButton = styled.button`
   transition: left 0.3s ease-in-out;
 
   &:hover {
-    background-color: #2980b9;
+    background-color: #5771ff;
   }
     @media (max-width: 768px) {
     right: 20px;
@@ -78,7 +78,7 @@ const Nav = styled.nav`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: ${(props) => (props.isOpen ? "1rem" : "0")};
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
   width: ${(props) => (props.isOpen ? "100%" : "0")};
@@ -137,7 +137,7 @@ const RootLayout = () => {
         </Nav>
       </RootLayoutWrapper>
       <MenuBar>
-          <Button onClick={toggleRootLayout}>{isOpen ? "❌" : "☰"}</Button>
+          <Button onClick={toggleRootLayout}>{isOpen ? "✖️" : "☰"}</Button>
         </MenuBar>
       <AddButton isOpen={isOpen}>➕</AddButton>
     </div>
