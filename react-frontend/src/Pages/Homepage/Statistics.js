@@ -6,7 +6,7 @@ const Statistics = () => {
 
   useEffect(() => {
     const incrementStats = () => {
-      setStats({ projects: 30_000_000, teams: 50_000, users: 3_000_000 });
+      setStats({ projects: 30, teams: 5000, users: 3000 });
     };
     setTimeout(incrementStats, 500);
   }, []);
