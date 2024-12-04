@@ -96,21 +96,18 @@ const RootLayout = () => {
 
   // Adjust RootLayout default state based on screen width
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsOpen(false); // Set RootLayout closed by default on small screens
-      } else {
-        setIsOpen(true); // Set RootLayout open by default on larger screens
-      }
-    };
+  const handleResize = () => {
+    setIsOpen(false); // Always closed regardless of screen size
+  };
 
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
+  window.addEventListener("resize", handleResize);
+  handleResize(); // Initial check
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  return () => {
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
+
 
   const toggleRootLayout = () => {
     setIsOpen(!isOpen);

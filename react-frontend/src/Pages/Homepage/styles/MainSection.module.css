@@ -99,3 +99,16 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem 3rem;
+    }
+
+    .image {
+        border-radius: 0.5rem;
+        border-top-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+}
