@@ -90,6 +90,61 @@ const NavLink = styled.a`
     color: #3498db;
   }
 `;
+const CTA = styled.nav`
+/* Basic styling for the navbar */
+.cta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* CTA buttons container */
+.cta-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+/* Login button styling */
+.login-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+/* Login button specific styles */
+.login-btn {
+  background-color: #555;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #777;
+}
+
+/* Signup button specific styles */
+.signup-btn {
+  background-color: #007bff;
+  color: white;
+  margin-right: 1rem;
+}
+
+.signup-btn:hover {
+  background-color: #0056b3;
+}
+
+
+`
 
 const RootLayout = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -137,6 +192,12 @@ const RootLayout = () => {
           <Button onClick={toggleRootLayout}>{isOpen ? "✖️" : "☰"}</Button>
         </MenuBar>
       <AddButton isOpen={isOpen}>➕</AddButton>
+      <CTA className="cta">
+        <div className="cta-buttons">
+          <button className="login-btn">Login</button>
+          <button className="signup-btn">Signup</button>
+      </div>
+      </CTA>
     </div>
       <ContentArea className='content' isOpen={isOpen}>     
         <Outlet /> {/* Render nested routes here */}
