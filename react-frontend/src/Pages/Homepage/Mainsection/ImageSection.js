@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles/MainSection.module.css';
-import image from "../../assets/1.jpg"
+import image from "../../../assets/1.jpg"
 
 const ImageSection = () => (
   <div className={styles.imageContainer}>

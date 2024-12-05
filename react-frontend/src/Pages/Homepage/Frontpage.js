@@ -1,10 +1,12 @@
 import React from 'react'
-import MainSection from './Homepage/MainSection'
+import MainSection from './Mainsection/MainSection'
+import Benefits from './Benefits/Benefits'
 
 function Frontpage() {
   return (
     <>
     <MainSection />
+    <Benefits />
     </>
   )
 }
