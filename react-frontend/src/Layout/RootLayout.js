@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 
 const Appcontent = styled.div`
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
+  background-color: #f7f8fc;
   `;
 
 
@@ -26,6 +27,7 @@ const ContentArea = styled.div`
   margin-left: ${(props) => (props.isOpen ? "250px" : "0px")};
   width: ${(props) => (props.isOpen ? "calc(100% - 250px)" : "100%")};
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  background: #f7f8fc;
 `;
 
 
@@ -37,7 +39,7 @@ const MenuBar = styled.div`
 `;
 
 const Button = styled.button`
-position: absolute;
+position: fixed;
   top: 10px;
   background: none;
   border: none;
@@ -51,7 +53,7 @@ position: absolute;
 `;
 
 const AddButton = styled.button`
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: ${(props) => (props.isOpen ? "200px" : "40px")};
   border: none;
@@ -97,7 +99,6 @@ const CTA = styled.nav`
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -107,7 +108,6 @@ const CTA = styled.nav`
   margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
-
   gap: 10px;
 }
 

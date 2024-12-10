@@ -1,0 +1,11 @@
+.image {
+    padding: 6rem;
+    height: 50%;
+    width: 60%;
+}
+
+img {
+    border-radius: 3rem;
+    width: 60%;
+    height: 50%;
+}

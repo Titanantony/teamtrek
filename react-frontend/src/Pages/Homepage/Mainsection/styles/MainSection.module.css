@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 4rem 6rem;
-    background-color: #f8fff2;
+    /* background-color: #f7f8fc; */
     gap: 2rem;
 }
 
@@ -80,7 +80,8 @@
 }
 
 .image {
-    max-width: 100%;
+
+    min-width: 100%;
     border-radius: 1rem;
     border-top-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
@@ -107,8 +108,10 @@
     }
 
     .image {
+        width: 100%;
         border-radius: 0.5rem;
         border-top-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
+
     }
 }
